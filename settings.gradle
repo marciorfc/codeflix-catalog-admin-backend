@@ -1,0 +1,4 @@
+rootProject.name = 'catalogo-admin-backend'
+include 'domain'
+include 'application'
+include 'infrastructure'
