@@ -4,7 +4,7 @@ import org.codeflix.admin.catalogo.domain.AggregateRoot;
 import org.codeflix.admin.catalogo.domain.validation.ValidationHandler;
 
 import java.time.Instant;
-import java.util.UUID;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -65,6 +65,23 @@ public class Category extends AggregateRoot<CategoryID> {
         this.updatedAt = Instant.now();
         return this;
     }
+
+    public Category update(
+            final String aName,
+            final String aDescription,
+            final boolean isActive) {
+
+        if (isActive) {
+            activate();
+        } else {
+            deactivate();
+        }
+        this.name = aName;
+        this.description = aDescription;
+        this.updatedAt = Instant.now();
+        return this;
+    }
+
 
     public String getName() {
         return name;
