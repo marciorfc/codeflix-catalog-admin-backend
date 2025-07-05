@@ -1,0 +1,7 @@
+mysql:
+  username: ${DATABASE_MYSQL_USERNAME:root}
+  password: ${DATABASE_MYSQL_PASSWORD:password}
+  url: localhost:3306
+  schema: ${DATABASE_MYSQL_URL:localhost:3306}
+
+
