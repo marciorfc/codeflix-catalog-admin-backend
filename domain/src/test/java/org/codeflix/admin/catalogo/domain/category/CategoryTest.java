@@ -273,7 +273,7 @@ public class CategoryTest {
         final var expectedIsActive = true;
 
         final var aCategory =
-                Category.newCategory("Film", "a cstegoria", true);
+                Category.newCategory("Film", "a categoria", true);
 
         Assertions.assertDoesNotThrow(() -> aCategory.validate(new ThrowsValidationHandler()));
 
