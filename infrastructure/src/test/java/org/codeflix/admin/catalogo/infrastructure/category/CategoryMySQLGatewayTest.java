@@ -1,29 +1,15 @@
 package org.codeflix.admin.catalogo.infrastructure.category;
 
 import org.codeflix.admin.catalogo.domain.category.Category;
-import org.codeflix.admin.catalogo.domain.category.CategoryGateway;
 import org.codeflix.admin.catalogo.domain.category.CategoryID;
 import org.codeflix.admin.catalogo.domain.category.CategorySearchQuery;
-import org.codeflix.admin.catalogo.infrastructure.MySQLGatewayTest;
+import org.codeflix.admin.catalogo.MySQLGatewayTest;
 import org.codeflix.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import org.codeflix.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.BeforeEachCallback;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.extension.ExtensionContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.wildfly.common.Assert;
 
-import java.util.Collection;
 import java.util.List;
 
 @MySQLGatewayTest

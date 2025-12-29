@@ -1,13 +1,20 @@
 package org.codeflix.admin.catalogo.infrastructure;
 
 import org.codeflix.admin.catalogo.application.UseCase;
+import org.codeflix.admin.catalogo.application.category.create.CreateCategoryUseCase;
+import org.codeflix.admin.catalogo.application.category.delete.DeleteCategoryUseCase;
+import org.codeflix.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCase;
+import org.codeflix.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCase;
+import org.codeflix.admin.catalogo.application.category.update.UpdateCategoryUseCase;
 import org.codeflix.admin.catalogo.domain.category.Category;
 import org.codeflix.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import org.codeflix.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
 import org.codeflix.admin.catalogo.infrastructure.configuration.WebServerConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.AbstractEnvironment;
 
@@ -25,6 +32,21 @@ public class Main {
         System.out.println("Hello and welcome!");
        // System.out.println(new UseCase().execute());
     }
+
+//    @Bean
+//    @DependsOnDatabaseInitialization
+//    ApplicationRunner runner(
+//            CreateCategoryUseCase createCategoryUseCase,
+//            DeleteCategoryUseCase deleteCategoryUseCase,
+//            GetCategoryByIdUseCase getCategoryByIdUseCase,
+//            ListCategoriesUseCase listCategoriesUseCase,
+//            UpdateCategoryUseCase updateCategoryUseCase
+//
+//                             ) {
+//        return args -> {
+//
+//        };
+//    }
 
 //    @Bean
 //    public ApplicationRunner runner(CategoryRepository categoryRepository) {
